@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1,
+        .box2 {
+            width: 100%;
+            height: 30vh;
+            transition: .5s;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .sqrt {
+            margin: 0 auto;
+            width: 25vh;
+            height: 25vh;
+            background-color: black;
+        }
+
+        .box {
+            float: left;
+            background-color: cadetblue;
+            width: 100px;
+            height: 100px;
+            animation: boxAnimation 1s;
+        }
+
+        @keyframes boxAnimation {
+            0% {
+                width: 0;
+                height: 0;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="bigger">Powiększ</button>
+    <button class="smaller">Pomniejsz</button>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, aliquam? Dolores nam dolor nisi,
+        nemo et perferendis, consequatur beatae eaque odit placeat autem explicabo saepe,
+        minima vel aliquam rerum earum aut reiciendis modi. Perspiciatis, unde fugit!
+        Fugiat repellendus, culpa nisi voluptate id facere necessitatibus asperiores
+        cupiditate autem placeat, itaque accusamus possimus totam dolorem nihil quae
+        illum eius. Possimus illum magni dolore? Debitis aliquid, iste unde quam enim quae
+        libero veniam, qui ipsam laboriosam, sit quas. Id, odit officia. Nostrum, facilis asperiores.
+        Saepe, illo ullam repellendus, temporibus maiores, tempora distinctio dolor ipsum dicta beatae cum culpa enim
+        vel debitis ipsa magnam.
+    </p>
+    <div class="box1 red"></div>
+    <div class="box2"></div>
+    <div class="sqrt"></div>
+    <button class="btn1">KWADRAT!</button>
+    <button class="btn2">KWADRAT!</button>
+    <br>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

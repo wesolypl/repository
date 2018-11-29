@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 200vh;
+}
+.wrapper{
+    margin: 10px 70px;
+}
+p{
+    font-size: 18px;
+    line-height: 200%;
+}
+.burger{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    font-size: 50px;
+    z-index: 1;
+    text-align: center;
+}
+i.fas{
+    display: none;
+}
+i.show{
+    display: block;
+}
+i.fa-angle-up{
+    color: white;
+}
+nav{
+    position: fixed;
+    top: -30vh;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: #000;
+    transition: .3s linear;
+}
+nav.show{
+    top:0;
+}

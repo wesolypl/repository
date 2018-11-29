@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Oswald, sans-serif;
+    font-size: 10px;
+}
+.team{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ddd;
+    position: relative;
+}
+img.color{
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    height: 40%;
+    z-index: 1;
+    animation: color 4s linear infinite;
+}
+img.grey{
+    position: absolute;
+    bottom: 0;
+    left: -70%;
+    height: 110%;
+    opacity: .2;
+    animation: grey 4s linear infinite;
+}
+.team .member{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: text 4s linear infinite;
+}
+.team h1{
+ font-size: 4rem;
+}
+.team h2{
+    font-size: 2.2rem;
+}
+@media (orientation:landscape){
+    img.color{
+        right: 5%;
+        height: 60%;
+    }
+    img.grey{
+        bottom: -10%;
+        left: -15%;
+        height: 130%;
+    }
+    .team .member{
+        top: 10%;
+        left: 40%;
+        width: 60%;
+    }
+}
+@media (min-width:1024px){
+    .team h1{
+        font-size: 6rem;
+    }
+    .team h2{
+        font-size: 4rem;
+    }
+}
+@keyframes color{
+    0%{
+        transform: translateX(0);
+        opacity: 0;
+    }
+    8%{
+        opacity: 0;
+    }
+    13%{
+        opacity: 1;
+    }
+    87%{
+        opacity: 1;
+    }
+    92%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+}
+@keyframes grey{
+    0%{
+        transform: translateX(0) scale(1);
+        opacity: 0;
+    }
+    8%{
+        opacity: 0;
+    }
+    13%{
+        opacity: .2;
+    }
+    87%{
+        opacity: .2;
+    }
+    92%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(5%) scale(1.1);
+        opacity: 0;
+    }
+}
+@keyframes text{
+    0%{
+        transform: scale(1);
+        opacity: 0;
+    }
+    8%{
+        opacity: 0;
+    }
+    13%{
+        opacity: 1;
+    }
+    87%{
+        opacity: 1;
+    }
+    92%{
+        opacity: 0;
+    }
+    100%{
+        transform:scale(1.1);
+        opacity: 0;
+    }
+}

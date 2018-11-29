@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        div {
+            flex-basis: 25%;
+            background-color: rgba(255, 0, 0, 0.2);
+        }
+
+        @media (max-width:640px) {
+            body {
+                background-image: url("img/640.jpeg")
+            }
+        }
+
+        @media (min-width:641px) and (max-width:1280px) {
+            body {
+                background-image: url("img/1280.jpeg")
+            }
+        }
+
+        @media (min-width:1281px) {
+            body {
+                background-image: url("img/1920.jpeg")
+            }
+        }
+
+        /* @media (min-width:641px) {
+            body {
+                background-color: rebeccapurple;
+            }
+        }
+
+        @media (min-width:1025px) {
+            body {
+                background-color: goldenrod;
+            }
+        } */
+
+        @media(orientation: portrait) {
+            body {
+                flex-direction: column;
+            }
+
+            div {
+                flex-basis: 50%;
+            }
+        }
+
+        @media(orientation: landscape) and (max-height:200px) {
+            div {
+                background-color: #ffffff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

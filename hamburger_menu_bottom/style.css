@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 200vh;
+}
+.wrapper{
+    margin: 10px 70px;
+}
+p{
+    font-size: 18px;
+    line-height: 200%;
+}
+.arrow{
+    position: fixed;
+    bottom: 6vh;
+    right: 30px;
+    font-size: 50px;
+    z-index: 1;
+    text-align: center;
+    transition: .3s linear;
+}
+
+.arrow.click{
+    bottom: 31vh;
+    transform: rotate(180deg);
+}
+
+nav{
+    position: fixed;
+    bottom: -25vh;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: #000;
+    transition: .3s linear;
+}
+nav.show{
+    bottom:0;
+}
