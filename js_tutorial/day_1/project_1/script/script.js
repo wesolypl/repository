@@ -11,4 +11,4 @@ const addElement = () => {
     document.querySelector('section').appendChild(div);
     i++;
 }
-document.querySelector('button').addEventListener('click', addElement)
+document.querySelector('button').addEventListener('click', addElement);

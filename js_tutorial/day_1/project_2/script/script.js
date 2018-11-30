@@ -8,4 +8,4 @@ const addElement = () => {
     document.querySelector('section ul').appendChild(li);
     i += 2;
 }
-document.querySelector('button').addEventListener('click', addElement)
+document.querySelector('button').addEventListener('click', addElement);
