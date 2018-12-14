@@ -1,29 +1,34 @@
 const startBtn = document.querySelector('.start');
 const resetBtn = document.querySelector('.reset');
+const h1 = document.querySelector('h1');
+let indexInterval;
 
-const startStoper = () => {
-    const btnText = startBtn.textContent;
-    const timeStart = new Date().getTime();
-    let intervalIndex = setInterval(start, 10);
-    if (btnText === "Start") {
-        startBtn.textContent = "Stop";
-        intervalIndex = setInterval(start, 10);
+let time = 0;
+
+
+const timer = () => {
+    if (startBtn.textContent === 'Start') {
+        startBtn.textContent = 'Stop';
+        indexInterval = setInterval(current, 10);
     } else {
-        startBtn.textContent = "Start";
-        clearInterval(intervalIndex);
-    }
-
-    function start() {
-        const timeNow = new Date().getTime();
-        const time = timeNow - timeStart;
-        console.log(time)
+        startBtn.textContent = 'Start';
+        clearInterval(indexInterval);
     }
 
 }
-const resetStoper = () => {
 
+const current = () => {
+    time++;
+    h1.textContent = (time / 100).toFixed(2);
 }
 
 
-startBtn.addEventListener('click', startStoper);
-resetBtn.addEventListener('click', resetStoper);
+const reset = () => {
+    startBtn.textContent = 'Start';
+    h1.textContent = '---'
+    time = 0;
+    clearInterval(indexInterval);
+}
+
+startBtn.addEventListener('click', timer);
+resetBtn.addEventListener('click', reset);
